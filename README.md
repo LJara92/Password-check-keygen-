@@ -6,6 +6,7 @@ Este es un generador de contraseñas seguro que te ayuda a crear contraseñas ro
 
 ## Características
 
+- Se puede chequear que tan segura es una contraseña.
 - Genera contraseñas seguras y aleatorias.
 - Permite personalizar la longitud de la contraseña.
 - Incluye una variedad de caracteres, incluyendo letras mayúsculas, letras minúsculas, números y símbolos.
