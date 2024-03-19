@@ -113,9 +113,9 @@ def main():
             if seguridad < 30:
                 print(f"La contraseña \033[91m{clave}\033[0m es muy debil, mejor genera una nueva")
             elif seguridad < 35:
-                print(f"La contraseña \033[91m{clave}\033[0m es medianamente debil, mejor genera una nueva")
-            elif seguridad < 50:
                 print(f"La contraseña \033[91m{clave}\033[0m es debil, mejor genera una nueva")
+            elif seguridad < 50:
+                print(f"La contraseña \033[91m{clave}\033[0m es medianamente debil, mejor genera una nueva")
             elif seguridad < 55:
                 print(f"La contraseña \033[93m{clave}\033[0m es mediana, se puede mejorar generando una nueva")
             elif seguridad < 80:
