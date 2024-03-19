@@ -109,18 +109,21 @@ def main():
             print("Ingrese la contraseña que quiere chequear")
             clave = input("Contraseña: ")
             seguridad = chequear_cleve(clave)
+            print(seguridad)
             if seguridad < 30:
-                print(f"La contraseña '{clave}' es muy debil, mejor genera una nueva")
+                print(f"La contraseña \033[91m{clave}\033[0m es muy debil, mejor genera una nueva")
             elif seguridad < 35:
-                print(f"La contraseña '{clave}' es medianamente debil, mejor genera una nueva")
+                print(f"La contraseña \033[91m{clave}\033[0m es medianamente debil, mejor genera una nueva")
             elif seguridad < 50:
-                print(f"La contraseña '{clave}' es debil, mejor genera una nueva")
+                print(f"La contraseña \033[91m{clave}\033[0m es debil, mejor genera una nueva")
             elif seguridad < 55:
-                print(f"La contraseña '{clave}' es mediana, se puede mejorar generando una nueva")
+                print(f"La contraseña \033[93m{clave}\033[0m es mediana, se puede mejorar generando una nueva")
+            elif seguridad < 80:
+                print(f"La contraseña \033[92m{clave}\033[0m es fuerte, se puede generar una nueva mas robusta")
             elif seguridad < 100:
-                print(f"La contraseña '{clave}' es fuerte, pero si quieres una mas segura la puedes generar")
+                print(f"La contraseña \033[92m{clave}\033[0m es bastante fuerte, pero si quieres una mucho mas robusta y segura la puedes generar")
             else:
-                print(f"La contraseña '{clave}' es muy fuerte, pero si quieres una mas segura la puedes generar")
+                print(f"La contraseña \033[92m{clave}\033[0m es muy fuerte, se tardaria demasiado en desifrar")
 
         elif opcion == 2:
             crear_clave()
@@ -130,7 +133,7 @@ def main():
             break
         
         else:
-            print(chr(27)+"[1;31m"+"\n**** Opcion incorrecta ****"+"\033[0;m")
+            print("\033[91m\n**** Opcion incorrecta ****"+"\033[0m")
     
 if __name__ == "__main__":
     main()
